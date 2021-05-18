@@ -1,0 +1,25 @@
+# Como crear archivo de grafos :
+#
+# la definición del grafo debe ir un nodo por linea, con strings separados
+# por ";", el primer string de izquierda a derecha representa el nombre del nodo,
+# el segundo item es un arreglo con los nombres de los otros nodos a los cuales
+# el nodo actual se conecta. El tercer item es opcional, se usa para indicarle
+# al programa de que color es el nodo o estación, si no se coloca nada,
+# el programa lo interpretara como un nodo blanco o sin color. Si deseas que el
+# nodo sea rojo escribir "red", para que sea tomado como verde,
+# escribir "green", cualquier otra cosa será considerado como blanco.
+
+# Ejemplos validos:
+# "Nombre del nodo ";["Otro nodo","Otro mas","etc"];"red"
+# "Otro nodo";["bla bla"];"green"
+# "bla bla";[]
+
+"A";["B"]
+"B";["C"]
+"C";["D","G"]
+"D";["E"]
+"E";["F"]
+"F";[]
+"G";["H"];"green"
+"H";["I"];"red"
+"I";["F"];"green"
