@@ -8,7 +8,7 @@ def load_file(path: str):
     graph = {}
     f = open(path, "r")
     lines = f.readlines()
-
+    f.close()
     decomented_lines = []
 
     # discard comments and creates a new list
@@ -56,11 +56,15 @@ def load_file(path: str):
             
             if has_color:
                 color = item[2]
+                
                 if color =='\n':
                     graph[node_name]["color"] = "white" 
                 else:       
                     color = color.replace('\n', '')
                     color = color.replace('"', '')
+                    if color !="red":
+                        if color!="green":
+                            color="white"
                     graph[node_name]["color"] = color
 
         return graph

@@ -1,0 +1,11 @@
+# this is a testing comment
+"A";["B"]
+"B";["C"]
+"C";["D","G"]
+"D";["E"]
+"E";["F"]
+"F";[]
+"G";["H"];"green"
+"H";["I"];"red"
+"I";["F"];"green"
+# this is another comment
